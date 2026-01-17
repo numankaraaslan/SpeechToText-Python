@@ -68,7 +68,7 @@ PRESETS = {
         "model_name": "large-v3-turbo",
         "device": "cuda",
         "compute_type": "float16",      # or "int8_float16" if you want more headroom
-        "chunk_sec": 2.0,
+        "chunk_sec": 3.0,
         "beam_size": 3,
         "vad_filter": True,
     },
@@ -76,7 +76,7 @@ PRESETS = {
         "model_name": "large-v3",
         "device": "cuda",
         "compute_type": "float16",
-        "chunk_sec": 2.0,               # more context beats beam inflation
+        "chunk_sec": 4.0,               # more context beats beam inflation
         "beam_size": 5,
         "vad_filter": True,
     },
@@ -84,7 +84,7 @@ PRESETS = {
         "model_name": "large-v3",
         "device": "cuda",
         "compute_type": "float16",
-        "chunk_sec": 2.0,
+        "chunk_sec": 4.0,
         "beam_size": 5,                 # 6 if you want, but 5 is the sweet spot
         "vad_filter": True,
     },
@@ -92,7 +92,7 @@ PRESETS = {
         "model_name": "large-v3",
         "device": "cuda",
         "compute_type": "float16",
-        "chunk_sec": 2.0,               # if latency truly isn't important
+        "chunk_sec": 4.0,               # if latency truly isn't important
         "beam_size": 5,
         "vad_filter": True,
     },
@@ -273,3 +273,4 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         print("\n🛑 Stopped by user.")
+
